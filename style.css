@@ -299,17 +299,17 @@ body {
 
 .panel {
     position: relative;
-    padding: 18px 14px 14px; /* chừa chỗ cho nhãn */
+    padding: 28px 14px 14px; /* tăng thêm không gian cho nhãn */
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(8,46,94,0.8), rgba(4,26,56,0.8));
     border: 1px solid rgba(84, 190, 255, 0.5);
     box-shadow: 0 6px 18px rgba(0,0,0,0.4), inset 0 0 12px rgba(84,190,255,0.15);
-    overflow: visible; /* cho phép nhãn tràn ra ngoài */
+    overflow: visible; /* cho phép nhãn tràn ra ngoài nếu cần */
 }
 
 .panel-title {
     position: absolute;
-    top: -10px; /* nhô lên một chút */
+    top: 4px; /* đặt hẳn trong panel để không bị che */
     left: 12px;
     padding: 4px 10px;
     font-size: 12px;
