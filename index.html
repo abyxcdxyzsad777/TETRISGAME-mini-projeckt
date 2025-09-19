@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>TETRIS</h1>
+        </div>
+        
+        <div class="game-main">
+            <div class="left-panel">
+                <div class="panel hold-panel">
+                    <div class="panel-title">HOLD</div>
+                    <canvas id="holdPiece" width="120" height="120"></canvas>
+                </div>
+                <div class="panel level-panel">
+                    <div class="panel-title">LEVEL</div>
+                    <div class="level-circle"><span id="level">1</span></div>
+                    <div class="lines-to-clear">LINES: <span id="lines">0</span></div>
+                </div>
+            </div>
+
+            <div class="game-board-container">
+                <canvas id="gameBoard" width="300" height="600"></canvas>
+            </div>
+
+            <div class="right-panel">
+                <div class="panel next-panel">
+                    <div class="panel-title">NEXT</div>
+                    <canvas id="nextPiece" width="120" height="120"></canvas>
+                </div>
+                <div class="panel score-panel">
+                    <div class="panel-title">SCORE</div>
+                    <div class="score-value" id="score">0</div>
+                    <div class="action-buttons">
+                        <button id="startBtn" class="btn btn-primary">Start</button>
+                        <button id="pauseBtn" class="btn btn-secondary">Pause</button>
+                        <button id="resetBtn" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-over-modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Điểm cuối cùng: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn btn-primary">Chơi lại</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
