@@ -37,10 +37,33 @@
                 <div class="panel score-panel">
                     <div class="panel-title">SCORE</div>
                     <div class="score-value" id="score">0</div>
+                    <div class="best-score">Best: <span id="bestScore">0</span></div>
+                    <div class="timer" id="timer">00:00</div>
                     <div class="action-buttons">
                         <button id="startBtn" class="btn btn-primary">Start</button>
                         <button id="pauseBtn" class="btn btn-secondary">Pause</button>
                         <button id="resetBtn" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+                <div class="panel options-panel">
+                    <div class="panel-title">OPTIONS</div>
+                    <div class="form-field">
+                        <label for="modeSelect">Mode</label>
+                        <select id="modeSelect">
+                            <option value="marathon">Marathon</option>
+                            <option value="ultra120">Ultra 120s</option>
+                            <option value="ultra180">Ultra 180s</option>
+                            <option value="zen">Zen</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <div class="form-field volume-field">
+                        <label for="volumeSlider">Volume</label>
+                        <div class="volume-controls">
+                            <button id="muteBtn" class="btn btn-secondary" type="button">Mute</button>
+                            <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.15"/>
+                        </div>
                     </div>
                 </div>
             </div>

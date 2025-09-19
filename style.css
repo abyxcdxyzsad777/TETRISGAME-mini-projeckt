@@ -368,6 +368,15 @@ body {
     margin: 8px 4px 12px;
 }
 
+.score-panel .best-score,
+.score-panel .timer {
+    margin: 0 4px 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #a9d6ff;
+    opacity: 0.95;
+}
+
 .action-buttons {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -383,4 +392,44 @@ body {
     font-size: 0.8rem; /* nhỏ hơn để vừa 3 cột */
     letter-spacing: 0.5px; /* bớt giãn chữ để vừa */
     white-space: nowrap;
+}
+
+/* Options panel styling */
+.options-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.options-panel .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.options-panel label {
+    font-size: 12px;
+    color: #cfe9ff;
+    opacity: 0.9;
+}
+
+.options-panel select,
+.options-panel input[type="range"] {
+    width: 100%;
+}
+
+.options-panel select {
+    background: rgba(0,0,0,0.35);
+    color: #cfe9ff;
+    border: 1px solid rgba(84,190,255,0.55);
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
+.volume-controls {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 8px;
 }
