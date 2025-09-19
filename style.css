@@ -299,16 +299,17 @@ body {
 
 .panel {
     position: relative;
-    padding: 14px;
+    padding: 18px 14px 14px; /* chừa chỗ cho nhãn */
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(8,46,94,0.8), rgba(4,26,56,0.8));
     border: 1px solid rgba(84, 190, 255, 0.5);
     box-shadow: 0 6px 18px rgba(0,0,0,0.4), inset 0 0 12px rgba(84,190,255,0.15);
+    overflow: visible; /* cho phép nhãn tràn ra ngoài */
 }
 
 .panel-title {
     position: absolute;
-    top: -12px;
+    top: -10px; /* nhô lên một chút */
     left: 12px;
     padding: 4px 10px;
     font-size: 12px;
@@ -317,6 +318,7 @@ body {
     background: linear-gradient(90deg, rgba(84,190,255,0.85), rgba(84,190,255,0.45));
     border: 1px solid rgba(84,190,255,0.9);
     border-radius: 4px;
+    z-index: 2;
 }
 
 .next-panel canvas,
@@ -367,8 +369,18 @@ body {
 }
 
 .action-buttons {
-    display: flex;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
 }
 
-.action-buttons .btn { flex: 1; }
+.action-buttons .btn {
+    flex: 1 1 0;
+    min-width: 0; /* cho phép co nút theo cột */
+    width: 100%;
+    padding: 8px 6px; /* giảm padding để không tràn */
+    font-size: 0.8rem; /* nhỏ hơn để vừa 3 cột */
+    letter-spacing: 0.5px; /* bớt giãn chữ để vừa */
+    white-space: nowrap;
+}
